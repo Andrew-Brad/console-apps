@@ -9,7 +9,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed630372-2115-4561-8ee4-38bdbfff4b8b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AsyncConsole/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AsyncConsole/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/McMasterCliSample/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/McMasterCliSample/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +23,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98766785e56e4531a13014935c13e8202da00/ae/501234fb/Console.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98766785e56e4531a13014935c13e8202da00/cf/b49c9f76/ConsoleColor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c61cc76f205b4535a5b4f40700c07900b2d200/fc/de85256c/Environment.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -101,7 +102,7 @@
       <updated>1730819244047</updated>
       <workItem from="1730819245642" duration="40000" />
       <workItem from="1733759134533" duration="1877000" />
-      <workItem from="1733761137571" duration="844000" />
+      <workItem from="1733761137571" duration="1264000" />
     </task>
     <servers />
   </component>
@@ -114,24 +115,5 @@
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/McMasterCliSample/Program.cs</url>
-          <line>21</line>
-          <properties documentPath="$PROJECT_DIR$/McMasterCliSample/Program.cs" containingFunctionPresentation="Lambda expression inside Method 'Main'">
-            <startOffsets>
-              <option value="808" />
-            </startOffsets>
-            <endOffsets>
-              <option value="875" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

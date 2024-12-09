@@ -11,8 +11,8 @@ public class Program
 
         // When a command executes, the raw string[] args value can be separated into two different categories: options and arguments.
         app.HelpOption();
-        var subjectOption = app.Option("-s|--subject <SUBJECT>", "The subject", CommandOptionType.SingleValue);
-        subjectOption.DefaultValue = "world";
+        // dotnet McMasterCliSample.dll --color Yellow Andrew Bob Sally
+        var subjectsOption = app.Argument("Subjects", "Subjects to address", multipleValues: true).IsRequired();
         var colorOption = app.Option("-c|--color <COLOR>", "Console color to print", CommandOptionType.SingleValue);
         colorOption.DefaultValue = Console.ForegroundColor.ToString();
 
@@ -22,7 +22,11 @@ public class Program
             {
                 Console.ForegroundColor = parsedColor;
             }
-            Console.WriteLine($"Hello {subjectOption.Value()}!");
+
+            foreach (var subject in subjectsOption.Values)
+            {
+                Console.WriteLine($"Hello, {subject}!");
+            }
             return 0;
         });
 
