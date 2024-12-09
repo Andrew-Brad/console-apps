@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncConsole", "AsyncConsole\AsyncConsole.csproj", "{A038B2FE-67D8-4C6A-A80B-A5A8891D63CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCli", "FullCli\FullCli.csproj", "{627970FE-2455-497A-A967-931B103F5E0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{A038B2FE-67D8-4C6A-A80B-A5A8891D63CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A038B2FE-67D8-4C6A-A80B-A5A8891D63CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A038B2FE-67D8-4C6A-A80B-A5A8891D63CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{627970FE-2455-497A-A967-931B103F5E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{627970FE-2455-497A-A967-931B103F5E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{627970FE-2455-497A-A967-931B103F5E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{627970FE-2455-497A-A967-931B103F5E0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
