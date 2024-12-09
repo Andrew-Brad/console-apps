@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncConsole", "AsyncConsol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McMasterCliSample", "McMasterCliSample\McMasterCliSample.csproj", "{627970FE-2455-497A-A967-931B103F5E0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCliApp", "FullCliApp\FullCliApp.csproj", "{287E3868-0C21-4ACD-82A2-0CCB78A94C19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{627970FE-2455-497A-A967-931B103F5E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{627970FE-2455-497A-A967-931B103F5E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{627970FE-2455-497A-A967-931B103F5E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{287E3868-0C21-4ACD-82A2-0CCB78A94C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{287E3868-0C21-4ACD-82A2-0CCB78A94C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{287E3868-0C21-4ACD-82A2-0CCB78A94C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{287E3868-0C21-4ACD-82A2-0CCB78A94C19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
