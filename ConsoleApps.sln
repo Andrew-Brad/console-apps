@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncConsole", "AsyncConsole\AsyncConsole.csproj", "{A038B2FE-67D8-4C6A-A80B-A5A8891D63CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullCli", "FullCli\FullCli.csproj", "{627970FE-2455-497A-A967-931B103F5E0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McMasterCliSample", "McMasterCliSample\McMasterCliSample.csproj", "{627970FE-2455-497A-A967-931B103F5E0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
