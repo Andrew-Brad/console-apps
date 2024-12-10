@@ -1,6 +1,6 @@
 ﻿namespace AsyncConsole
 {
-    public abstract class Program
+    public class Program
     {
         public static Task Main() => MainAsync();
 
