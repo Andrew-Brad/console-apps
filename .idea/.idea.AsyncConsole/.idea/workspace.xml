@@ -4,15 +4,13 @@
     <projectFile>AsyncConsole/AsyncConsole.csproj</projectFile>
     <projectFile>FullCli/FullCli.csproj</projectFile>
     <projectFile>FullCliApp/FullCliApp.csproj</projectFile>
+    <projectFile>WidgetFactory/WidgetFactory.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed630372-2115-4561-8ee4-38bdbfff4b8b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FullCliApp/FooService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FullCliApp/FullCliApp.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FullCliApp/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AsyncConsole/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AsyncConsole/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConsoleApps.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApps.sln" afterDir="false" />
     </list>
@@ -43,25 +41,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.AsyncConsole.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Project.FullCli.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Project.FullCliApp.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Project.McMasterCliSample.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.AsyncConsole.executor": "Run",
+    ".NET Project.FullCli.executor": "Debug",
+    ".NET Project.FullCliApp.executor": "Run",
+    ".NET Project.McMasterCliSample.executor": "Debug",
+    ".NET Project.WidgetFactory.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected=".NET Project.FullCliApp">
+}]]></component>
+  <component name="RunManager" selected=".NET Project.WidgetFactory">
     <configuration name="AsyncConsole" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -116,7 +115,26 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="WidgetFactory" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/WidgetFactory/WidgetFactory.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue=".NET Project.WidgetFactory" />
       <item itemvalue=".NET Project.AsyncConsole" />
       <item itemvalue=".NET Project.McMasterCliSample" />
       <item itemvalue=".NET Project.FullCliApp" />
@@ -132,7 +150,7 @@
       <updated>1730819244047</updated>
       <workItem from="1730819245642" duration="40000" />
       <workItem from="1733759134533" duration="1877000" />
-      <workItem from="1733761137571" duration="2613000" />
+      <workItem from="1733761137571" duration="4920000" />
     </task>
     <servers />
   </component>
@@ -177,13 +195,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/FullCliApp/FooService.cs</url>
-          <line>17</line>
+          <line>8</line>
           <properties documentPath="$PROJECT_DIR$/FullCliApp/FooService.cs" containingFunctionPresentation="Method 'Invoke'">
             <startOffsets>
-              <option value="318" />
+              <option value="203" />
             </startOffsets>
             <endOffsets>
-              <option value="384" />
+              <option value="268" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
