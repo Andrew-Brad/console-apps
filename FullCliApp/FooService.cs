@@ -16,7 +16,7 @@ public class FooService(IConsole console, IConfiguration configuration) : IFooSe
 
 
         bool fileExists = File.Exists(filePath);
-        Console.WriteLine(fileExists
+        console.WriteLine(fileExists
             ? $"The file path you provided was resolved and exists: {filePath}"
             : $"The file path you provided does not exist: {filePath}");
 
