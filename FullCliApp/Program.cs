@@ -1,31 +1,18 @@
 ﻿using McMaster.Extensions.CommandLineUtils;
 using McMaster.Extensions.CommandLineUtils.Abstractions;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace FullCliApp;
 
-public class Program
+public class Program(CommandLineContext context, IEnumerable<CommandArgument> commandArguments, IFooService fooService)
 {
-    private readonly IConsole _console;
-    private readonly CommandLineContext _context;
-    private readonly IEnumerable<CommandArgument> _commandArguments;
-    private readonly IFooService _fooService;
+    private readonly CommandLineContext _context = context;
     private const string FilePathArgument = "filePath";
-
-    public Program(IConsole console, CommandLineContext context, IEnumerable<CommandArgument> commandArguments,
-        IFooService fooService)
-    {
-        _console = console;
-        _context = context;
-        _commandArguments = commandArguments;
-        _fooService = fooService;
-    }
 
     public static int Main(string[] args)
     {
         var config = BuildConfiguration();
-        var services = ConfigureServices(config);
+        var services = ServiceCollectionExtensions.ConfigureServices(config);
 
         var app = new CommandLineApplication<Program>();
         var filePathArg = app.Argument(FilePathArgument, "The path to the file to use");
@@ -38,10 +25,10 @@ public class Program
         return app.Execute(args);
     }
 
-    private int OnExecute()
+    public int OnExecute()
     {
-        var filePath = _commandArguments.Single(x => x.Name == FilePathArgument).Value!;
-        Console.WriteLine(_fooService.DoTheThing(filePath));
+        var filePath = commandArguments.Single(x => x.Name == FilePathArgument).Value!;
+        Console.WriteLine(fooService.DoTheThing(filePath));
         return 0;
     }
 
@@ -49,22 +36,9 @@ public class Program
     {
         var builder = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-        //.AddEnvironmentVariables() // Env variables will be prioritized
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+            .AddEnvironmentVariables(); // Env variables will be prioritized
 
         return builder.Build();
-    }
-
-    private static IServiceProvider ConfigureServices(IConfiguration config)
-    {
-        // Register IConfiguration
-        return new ServiceCollection()
-            .AddSingleton(config)
-            .AddSingleton<IFooService, FooService>()
-            .AddSingleton<IConsole>(PhysicalConsole.Singleton)
-            .BuildServiceProvider();
-        // Register CommandLine Application and dependencies
-        // services.AddSingleton<AppCommand>();
-        // services.AddTransient<CommandLineApplication<AppCommand>>();
     }
 }
