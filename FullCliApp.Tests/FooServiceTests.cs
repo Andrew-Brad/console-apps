@@ -1,10 +1,10 @@
-using McMaster.Extensions.CommandLineUtils;
 using Microsoft.Extensions.Configuration;
 using Moq;
+using static FullCliApp.Tests.TestServiceCollectionExtensions;
 
 namespace FullCliApp.Tests;
 
-public class FullCliAppTests
+public class FooServiceTests
 {
     [Fact]
     public void DoTheThing_ShouldOutputPriorityMessage_WhenPriorityMessageIsSet()
@@ -94,7 +94,7 @@ public class FullCliAppTests
 
         var service = new FooService(testConsole, mockConfig.Object);
         string tempFile = Path.GetTempFileName();
-        string fileContent = "Sample File Content";
+        const string fileContent = "Sample File Content";
         File.WriteAllText(tempFile, fileContent);
 
         // Act
@@ -104,9 +104,6 @@ public class FullCliAppTests
         string output = testConsole.Out.ToString()!;
         Assert.Contains($"The file path you provided was resolved and exists: {tempFile}", output);
         Assert.Equal(fileContent, result);
-
         File.Delete(tempFile);
     }
-
-    private IConsole GetTestConsole() => new MockConsole();
 }

@@ -1,18 +1,23 @@
 ﻿using McMaster.Extensions.CommandLineUtils;
 using McMaster.Extensions.CommandLineUtils.Abstractions;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace FullCliApp;
 
-public class Program(CommandLineContext context, IEnumerable<CommandArgument> commandArguments, IFooService fooService)
+public class Program(IConsole console, CommandLineContext context, IEnumerable<CommandArgument> commandArguments, IFooService fooService)
 {
+    public static IServiceProvider? ServiceProvider { get; set; }
     private readonly CommandLineContext _context = context;
+    private readonly IConsole _console = console;
     private const string FilePathArgument = "filePath";
 
     public static int Main(string[] args)
     {
         var config = BuildConfiguration();
-        var services = ServiceCollectionExtensions.ConfigureServices(config);
+        var services = ServiceProvider ?? ServiceCollectionExtensions
+            .ConfigureServices(config)
+            .BuildServiceProvider();
 
         var app = new CommandLineApplication<Program>();
         var filePathArg = app.Argument(FilePathArgument, "The path to the file to use");
@@ -28,11 +33,12 @@ public class Program(CommandLineContext context, IEnumerable<CommandArgument> co
     public int OnExecute()
     {
         var filePath = commandArguments.Single(x => x.Name == FilePathArgument).Value!;
-        Console.WriteLine(fooService.DoTheThing(filePath));
+        var serviceOutput = fooService.DoTheThing(filePath);
+        _console.WriteLine(serviceOutput);
         return 0;
     }
 
-    private static IConfiguration BuildConfiguration()
+    public static IConfiguration BuildConfiguration()
     {
         var builder = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())

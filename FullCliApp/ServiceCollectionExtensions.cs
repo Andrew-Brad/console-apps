@@ -6,13 +6,12 @@ namespace FullCliApp;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceProvider ConfigureServices(IConfiguration config)
+    public static IServiceCollection ConfigureServices(IConfiguration config)
     {
         return new ServiceCollection()
             .AddSingleton(config)
             .AddSingleton<IFooService, FooService>()
-            .AddSingleton<IConsole>(PhysicalConsole.Singleton)
-            .BuildServiceProvider();
+            .AddSingleton<IConsole>(PhysicalConsole.Singleton);
         // Register CommandLine Application and dependencies
         // services.AddSingleton<AppCommand>();
         // services.AddTransient<CommandLineApplication<AppCommand>>();

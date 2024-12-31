@@ -2,7 +2,7 @@ using McMaster.Extensions.CommandLineUtils;
 
 namespace FullCliApp.Tests;
 
-public class MockConsole : IConsole
+public class TestConsole : IConsole
 {
     public TextWriter Out { get; } = new StringWriter();
     public TextWriter Error { get; } = new StringWriter();
